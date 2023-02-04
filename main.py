@@ -1,7 +1,7 @@
 import requests
 import json
 import subprocess
-from pyrogram import Client, client,  filters
+from pyrogram import Client, client,
 from pyrogram.types.messages_and_media import message
 from pyrogram.errors import FloodWait
 from pyromod import listen
@@ -41,7 +41,7 @@ logger = logging.getLogger()
 
 os.makedirs("./downloads", exist_ok=True)
 
-@bot.on_message(filters.command(["start"])& ~filters.edited)
+@bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Hello im txt file downloader\nPress **/pyro** to download links listed in a txt file in the format **Name:link**\nBot made by ACE")
     
@@ -57,7 +57,7 @@ async def account_login(bot: Client, m: Message):
 #     url = raw_file.split('&')[1]
 
 
-@bot.on_message(filters.command(["pyro"])& ~filters.edited)
+@bot.on_message(filters.command(["pyro"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Send txt file**")
     input: Message = await bot.listen(editable.chat.id)
