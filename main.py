@@ -1,7 +1,7 @@
 import requests
 import json
 import subprocess
-from pyrogram import Client, client,
+from pyrogram import Client, client, filters
 from pyrogram.types.messages_and_media import message
 from pyrogram.errors import FloodWait
 from pyromod import listen
