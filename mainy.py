@@ -167,7 +167,7 @@ async def account_login(bot: Client, m: Message):
 
             Show = f"**Downloading:-**\n\n**Name :-** ```{name}\nQuality - {raw_text2}```\n\n**Url :-** ```{url}```"
             prog = await m.reply_text(Show)
-            cc = f'>> **Name :** {name}\n>> **Title :** {raw_text0}\n\n>> **Index :** {count}'
+            cc = f'**{count} :** {name}\n{raw_text0}'
 
             if "youtu" in url:
                 if raw_text2 in ["144", "240", "480"]:
@@ -211,7 +211,7 @@ async def account_login(bot: Client, m: Message):
                     reply = await message.reply("Uploading")
                     start_time = time.time()
 
-                    await m.reply_document(ka, caption=f'>> **File :** {name}\n>> **Title :** {raw_text0}\n\n>> **Index :** {count}',progress=progress_bar,progress_args=(reply,start_time))
+                    await m.reply_document(ka, caption=f'**{count} :** {name}\n{raw_text0}',progress=progress_bar,progress_args=(reply,start_time))
                     count+=1
                     await prog.delete (True)
                     os.remove(ka)
