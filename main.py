@@ -33,7 +33,7 @@ import requests
 bot = Client(
     "bot",
     bot_token=os.environ.get("BOT_TOKEN","6263571679:AAFo_0kinup58EynaH2X9zWGXexVknOuVQc"),
-    api_id=int(os.environ.get("API_ID",1937616968)),
+    api_id=int(os.environ.get("API_ID",8953645)),
     api_hash=os.environ.get("API_HASH","66b4568bd06be74c3b92ce83dfc41299")
 )
 
